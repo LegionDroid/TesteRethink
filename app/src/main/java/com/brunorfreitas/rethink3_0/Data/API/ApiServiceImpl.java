@@ -1,5 +1,7 @@
 package com.brunorfreitas.rethink3_0.Data.API;
 
+import android.util.Log;
+
 import com.brunorfreitas.rethink3_0.Data.Model.Airport;
 import com.brunorfreitas.rethink3_0.Data.Model.Login;
 import com.brunorfreitas.rethink3_0.Data.Model.LoginResponse;
@@ -190,10 +192,6 @@ public class ApiServiceImpl implements ApiService{
 
                 LoginResponse loginResponse = response.body();
                 callback.onSucces(loginResponse);
-                //TODO - salvar Token em preferencias
-
-//                textView.setText(loginResponse.getToken());
-//                Log.d("Token", loginResponse.getToken());
             }
 
             @Override
@@ -234,8 +232,9 @@ public class ApiServiceImpl implements ApiService{
                 }
                 ResponseCode responseCode = response.body();
                 callback.onSucces(responseCode);
+                Log.d("APIcheckout", response.toString());
+
 //                textView.setText((CharSequence) response.body());
-//                Log.d("checkout", response.toString());
             }
 
             @Override

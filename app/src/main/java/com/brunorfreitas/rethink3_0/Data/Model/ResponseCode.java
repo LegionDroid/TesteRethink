@@ -14,4 +14,11 @@ public class ResponseCode {
     public void setCodeFlight(String codeFlight) {
         this.codeFlight = codeFlight;
     }
+
+    @Override
+    public String toString() {
+        return "ResponseCode{" +
+                "codeFlight='" + codeFlight + '\'' +
+                '}';
+    }
 }

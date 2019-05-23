@@ -24,6 +24,8 @@
             android:configChanges="keyboardHidden|orientation|screenSize">
         </activity>
         <activity android:name=".ui.FlightsActivity.FlightsActivity"/>
+        <activity android:name=".ui.TotalActivity.ViewTotalActivity"/>
+        <activity android:name=".ui.LoginActivity.LoginActivity"/>
     </application>
 
 </manifest>

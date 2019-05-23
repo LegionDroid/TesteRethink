@@ -11,10 +11,13 @@ public interface ContractFlightsActivity {
         void hideProgressBar();
         void showFlights(List<Flight> flightList);
         void mostrarErro(String msg);
+        void mostrarTaxas(int position);
+        void chamarProximaActivity();
     }
 
     interface Presenter{
         void loadFlights();
         void selectFlight(String uidFlight);
+        void selectTaxa(String uidFare);
     }
 }

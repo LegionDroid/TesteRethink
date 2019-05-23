@@ -72,6 +72,7 @@
             android:textColorHint="@color/color_orange" />
 
         <EditText
+            android:visibility="gone"
             android:id="@+id/act_conf_data_et_data_volta"
             android:layout_width="wrap_content"
             android:layout_height="30dp"

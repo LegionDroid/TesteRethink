@@ -52,4 +52,10 @@ public class PresenterFlightsActivity implements ContractFlightsActivity.Present
     public void selectFlight(String uidFlight) {
         preferencesHawk.setUidFlight1(uidFlight);
     }
+
+    @Override
+    public void selectTaxa(String uidFare) {
+        preferencesHawk.setUidFareFlight1(uidFare);
+        view.chamarProximaActivity();
+    }
 }
