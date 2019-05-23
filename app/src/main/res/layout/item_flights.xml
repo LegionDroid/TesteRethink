@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_flights_cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_flights_tv_airport_partida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRU"
+                android:textColor="@color/color_black"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:rotation="180"
+                android:src="@drawable/ic_keyboard_backspace_black_24dp" />
+
+            <TextView
+                android:id="@+id/item_flights_tv_airport_destino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LAX"
+                android:textColor="@color/color_black"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_flights_tv_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:00"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

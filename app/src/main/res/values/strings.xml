@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Rethink3_0</string>
+    <string name="Aeroporto_de_partida">Aeroporto de partida</string>
+    <string name="aeroporto_de_chegada">Aeroporto de chegada</string>
+    <string name="ida">IDA</string>
+    <string name="de">DE</string>
+    <string name="para">PARA</string>
+</resources>
