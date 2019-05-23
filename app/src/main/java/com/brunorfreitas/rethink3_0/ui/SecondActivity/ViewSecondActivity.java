@@ -99,17 +99,4 @@ public class ViewSecondActivity extends AppCompatActivity implements ContractSec
         Intent intent = new Intent(context, ViewConfirmAndDateActivity.class);
         startActivity(intent);
     }
-
-//    @Override
-//    public void chamDialogData() {
-////        DatePickerFragment dateFragment = new DatePickerFragment();
-////        dateFragment.show(getSupportFragmentManager(),"dataFragment");
-////        dateFragment.setDialogCallback(new DatePickerFragment.DataDialogCallback() {
-////            @Override
-////            public void data(String data) {
-////                Log.d("DATA", "viewsecondact"+data);
-////                presenter.salvarDataIda(data);
-////            }
-////        });
-//    }
 }

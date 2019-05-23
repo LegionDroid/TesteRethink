@@ -106,15 +106,6 @@ public class FlightsActivity extends AppCompatActivity implements ContractFlight
                 if (checkedId != -1 &&
                         ((RadioButton) findViewById(checkedId)).isChecked()) {
                     rg2.clearCheck();
-
-//                    switch (rg.getCheckedRadioButtonId()) {
-//                        case R.id.activity_taxas_smiles1:
-//                            uidFare = fares.get(0).getUid();
-//                            break;
-//                        case R.id.activity_taxas_smiles2:
-//                            uidFare = fares.get(1).getUid();
-//                            break;
-//                    }
                 }
             }
         });

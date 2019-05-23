@@ -72,14 +72,6 @@ public class ViewConfirmAndDateActivity extends AppCompatActivity implements Con
             }
         });
 
-//        et_dataIda.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View view, boolean b) {
-//                if(!b) return;
-//
-//                abrirDialogDataIda();
-//            }
-//        });
         et_dataVolta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -151,7 +143,6 @@ public class ViewConfirmAndDateActivity extends AppCompatActivity implements Con
     public void abrirProximaActivity() {
         Intent intent = new Intent(context, FlightsActivity.class);
         startActivity(intent);
-//        Toast.makeText(context, "vamoooooooooo", Toast.LENGTH_SHORT).show();
     }
 
     @Override

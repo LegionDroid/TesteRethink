@@ -34,7 +34,6 @@ public class PresenterFlightsActivity implements ContractFlightsActivity.Present
                 new ApiService.ApiServiceCallback<RequestedFlightSegmentList>() {
                     @Override
                     public void onSucces(RequestedFlightSegmentList result) {
-                        //TODO - estou pegando apenas o voo de ida
                         List<Flight> flightList;
                         flightList = result.getRequestedFlightSegmentList().get(0).getFlightList();
                         view.showFlights(flightList);

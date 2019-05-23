@@ -12,12 +12,6 @@ public class PreferencesHawkImpl implements PreferencesHawk {
 
     private final String TAG = "HAWK";
 
-//    private String codeAirport1;
-//    private String codeAirport2;
-//    private String dateFliht1;
-//    private int passengers;
-//    private String dateFlight2;
-
     private final String CHAVE_TOTAL = "chaveTotal";
     private final String CHAVE_TOKEN = "chaveToken";
     private final String CHAVE_CODEAIRPORT1 = "chaveCodeAirport1";
@@ -27,7 +21,7 @@ public class PreferencesHawkImpl implements PreferencesHawk {
     private final String CHAVE_PASSENGERS = "chavePassengers";
     private final String CHAVE_UIDFLIGHT1 = "chaveUidFlight1";
     private final String CHAVE_FARE1 = "chaveFare1";
-    //    private final String CHAVE_FLIGHT2 = "chaveFlight2";
+//    private final String CHAVE_FLIGHT2 = "chaveFlight2";
 //    private final String CHAVE_FARE2 = "chaveFare2";
 
     public PreferencesHawkImpl(Context context) {
@@ -93,7 +87,6 @@ public class PreferencesHawkImpl implements PreferencesHawk {
         String codAer2 = Hawk.get(CHAVE_CODEAIRPORT2);
         String dateIda = Hawk.get(CHAVE_DATEFLIGHT1);
 
-//        String teste = Hawk.get(CHAVE_PASSENGERS);
 
         String dateVolta = Hawk.get(CHAVE_DATEFLIGHT2);
         int passengers = Hawk.get(CHAVE_PASSENGERS);
@@ -104,12 +97,6 @@ public class PreferencesHawkImpl implements PreferencesHawk {
         } else {
             search = new Search(codAer1, codAer2, dateIda, passengers);
         }
-
-        Log.d(TAG, "hawk criou search: codAer1: " + codAer1 + "\n" +
-                "codAer2: " + codAer1 + "\n" +
-                "dateIda: " + dateIda + "\n" +
-                "passengers: " + passengers + "\n" +
-                "dataVolta: " + dateVolta);
 
         return search;
     }

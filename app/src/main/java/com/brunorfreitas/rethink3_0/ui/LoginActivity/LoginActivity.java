@@ -1,6 +1,7 @@
 package com.brunorfreitas.rethink3_0.ui.LoginActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import com.brunorfreitas.rethink3_0.Data.Model.LoginResponse;
 import com.brunorfreitas.rethink3_0.Data.Preferences.PreferencesHawk;
 import com.brunorfreitas.rethink3_0.Data.Preferences.PreferencesHawkImpl;
 import com.brunorfreitas.rethink3_0.R;
+import com.brunorfreitas.rethink3_0.ui.MyFlights.ViewMyFlights;
 import com.orhanobut.hawk.Hawk;
 
 public class LoginActivity extends AppCompatActivity implements ContractLogin.View {
@@ -55,6 +57,8 @@ public class LoginActivity extends AppCompatActivity implements ContractLogin.Vi
                 if (!username.isEmpty()){
                     presenter.register(username);
                 }
+
+                Toast.makeText(context, "Conectando...", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -62,7 +66,8 @@ public class LoginActivity extends AppCompatActivity implements ContractLogin.Vi
 
     @Override
     public void chamaProximaActivity() {
-        Toast.makeText(context, "Concluido!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(context, ViewMyFlights.class);
+        startActivity(intent);
     }
 
     @Override

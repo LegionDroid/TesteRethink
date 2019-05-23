@@ -65,22 +65,10 @@ public class ApiServiceImpl implements ApiService{
 
                 List<Airport> airports = response.body();
                 callback.onSucces(airports);
-//                for (Airport location: Airports) {
-//
-//                    String content = "";
-//                    content += "code:"+location.getCode()+ "\n";
-//                    content += "name:"+location.getName()+ "\n";
-//                    content += "city:"+location.getCity()+ "\n";
-//                    content += "country:"+location.getCountry()+ "\n";
-//                    content += "timezone:"+location.getTimezone()+ "\n\n";
-//
-//                    textView.append(content);
-//                }
             }
 
             @Override
             public void onFailure(Call<List<Airport>> call, Throwable t) {
-//                textView.setText(t.getMessage());
                 t.printStackTrace();
                 callback.onFailure("Error code: " +t.getMessage());
             }
@@ -92,13 +80,6 @@ public class ApiServiceImpl implements ApiService{
                                  int passengers, String dateReturn,
                                  final ApiServiceCallback<RequestedFlightSegmentList> callback) {
 
-//        Call<RequestedFlightSegmentList> call = getInstance().getFlights(
-//                "GRU",
-//                "GIG",
-//                "2019-05-22",
-//                1,
-//                "2019-05-23"
-//        );
         Call<RequestedFlightSegmentList> call = getInstance().getFlights(
                 codeOrigin,
                 codeDestination,
@@ -112,20 +93,11 @@ public class ApiServiceImpl implements ApiService{
             public void onResponse(Call<RequestedFlightSegmentList> call, Response<RequestedFlightSegmentList> response) {
                 if(!response.isSuccessful()){
                     callback.onFailure("Error code: " +response.code());
-//                    textView.setText("Code: "+response.code());
                     return;
                 }
 
                 RequestedFlightSegmentList requestedFlightSegmentList = response.body();
                 callback.onSucces(requestedFlightSegmentList);
-//                List<FlightSegment> flightSegments
-//                        = requestedFlightSegmentList.getRequestedFlightSegmentList();
-//
-//                FlightSegment flightSegment = flightSegments.get(0);
-//
-//                flightSegment.getType();
-//
-//                textView.setText(String.valueOf(flightSegment.getType()));
             }
 
             @Override
@@ -154,16 +126,10 @@ public class ApiServiceImpl implements ApiService{
             public void onResponse(Call<Tarifa> call, Response<Tarifa> response) {
                 if (!response.isSuccessful()){
                     callback.onFailure("Error code: " +response.code());
-//                    textView.setText("Code: "+response.code());
                     return;
                 }
                 Tarifa tarifa = response.body();
                 callback.onSucces(tarifa);
-//                String content = "";
-//                content += "Miles: "+tarifa.getTotal().getMiles()+"\n";
-//                content += "Money: "+tarifa.getTotal().getMoney()+"\n";
-//
-//                textView.setText(content);
             }
 
             @Override
@@ -186,7 +152,6 @@ public class ApiServiceImpl implements ApiService{
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (!response.isSuccessful()){
                     callback.onFailure("Error code: " + response.code());
-//                    textView.setText("Code: " + response.code());
                     return;
                 }
 
@@ -206,20 +171,6 @@ public class ApiServiceImpl implements ApiService{
     @Override
     public void setCheckout(String token, Purchase purchase,
                             final ApiServiceCallback<ResponseCode> callback) {
-//        Total total = new Total();
-//        total.setMiles(75000);
-//        total.setMoney(90.6);
-//
-//        String token = "0f1dd917-8556-43e4-9eee-f64526069b52";
-//
-//        Purchase purchase = new Purchase(
-//                "fc7b19e9-9bbf-49cf-9ebf-4dc9d518b601",
-//                "19046ecd-eaa2-4f4d-b12c-3fc5edebf407",
-//                "ca81315b-a7cc-4c28-bd73-66064bf6ec58",
-//                "8469f5c8-54a2-4cf1-8f40-fbe1b33bc5a9",
-//                1,
-//                total
-//        );
 
         Call<ResponseCode> call = getInstance().setCheckout(token, purchase);
         call.enqueue(new Callback<ResponseCode>() {
@@ -227,21 +178,17 @@ public class ApiServiceImpl implements ApiService{
             public void onResponse(Call<ResponseCode> call, Response<ResponseCode> response) {
                 if (!response.isSuccessful()){
                     callback.onFailure("Error code: " + response.message());
-//                    textView.setText(response.message());
                     return;
                 }
                 ResponseCode responseCode = response.body();
                 callback.onSucces(responseCode);
                 Log.d("APIcheckout", response.toString());
-
-//                textView.setText((CharSequence) response.body());
             }
 
             @Override
             public void onFailure(Call<ResponseCode> call, Throwable t) {
                 t.printStackTrace();
                 callback.onFailure("Error code: " +t.getMessage());
-//                textView.setText(t.getMessage());
             }
         });
 
@@ -257,26 +204,17 @@ public class ApiServiceImpl implements ApiService{
             public void onResponse(Call<MyFlightsResponse> call, Response<MyFlightsResponse> response) {
                 if(!response.isSuccessful()){
                     callback.onFailure("Error code: " + response.code());
-//                    textView.setText(String.valueOf(response.code()));
                     return;
                 }
 
                 MyFlightsResponse myFlightsResponse = response.body();
                 callback.onSucces(myFlightsResponse);
-//                String teste = myFlightsResponse.getMyFlights().get(0).getCode();
-//                User teste2 = myFlightsResponse.getUser();
-//                int teste3 = myFlightsResponse.getMyFlights().size();
-
-//                textView.setText(String.valueOf(teste3));
-
-//                textView.setText(String.valueOf(response.code()));
             }
 
             @Override
             public void onFailure(Call<MyFlightsResponse> call, Throwable t) {
                 callback.onFailure("Error code: " +t.getMessage());
                 t.printStackTrace();
-//                textView.setText(t.getMessage());
             }
         });
 

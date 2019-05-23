@@ -43,11 +43,6 @@ public class PresenterSecondActivity implements ContractSecondActivity.Presenter
     @Override
     public void selectAirport(String code) {
      preferencesHawk.setCodeAirport2(code);
-     String teste = preferencesHawk.getCodeAirport2();
-     String teste2 = preferencesHawk.getCodeAirport1();
-
-//     preferencesHawk.getCodeAirport1();
      view.chamaProximaActivity();
-     Log.d("AIRPORT2", "retornou do hawk1:"+teste+" 2: " +teste2);
     }
 }

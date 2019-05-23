@@ -16,7 +16,6 @@ import com.brunorfreitas.rethink3_0.Data.Preferences.PreferencesHawk;
 import com.brunorfreitas.rethink3_0.Data.Preferences.PreferencesHawkImpl;
 import com.brunorfreitas.rethink3_0.R;
 import com.brunorfreitas.rethink3_0.ui.LoginActivity.LoginActivity;
-import com.orhanobut.hawk.Hawk;
 
 public class ViewTotalActivity extends AppCompatActivity implements ContractTotalActivity.View {
 

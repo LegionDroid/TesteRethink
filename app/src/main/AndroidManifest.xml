@@ -26,6 +26,7 @@
         <activity android:name=".ui.FlightsActivity.FlightsActivity"/>
         <activity android:name=".ui.TotalActivity.ViewTotalActivity"/>
         <activity android:name=".ui.LoginActivity.LoginActivity"/>
+        <activity android:name=".ui.MyFlights.ViewMyFlights"/>
     </application>
 
 </manifest>

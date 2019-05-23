@@ -56,13 +56,6 @@ public class PresenterLogin implements ContractLogin.Presenter {
                     @Override
                     public void onSucces(ResponseCode result) {
                         view.chamaProximaActivity();
-//                        String teste = responseCode.getCodeFlight();
-//                        Log.d("LoginPresenter", teste);
-//                        Log.d("LoginPresenter", responseCode.toString());
-
-//                        if (!result.getCodeFlight().isEmpty()){
-//                            view.chamaProximaActivity();
-//                        }
                     }
 
                     @Override

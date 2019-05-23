@@ -11,7 +11,6 @@ public interface ContractFirstActivity {
         void hideProgressBar();
         void showAirports(List<Airport> airportList);
         void showError(String message);
-//        void reload();
     }
 
     interface Presenter{
